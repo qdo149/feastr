@@ -1,53 +1,100 @@
 # Project Title
 
+Feastr
+
 ## Overview
 
-What is your app? Give a brief description in a couple of sentences.
+Feastr is a Tinder-like web app designed to help users discover new restaurants in Calgary. Users can swipe left (pass) or right (like) on restaurants, and when they match with a restaurant, they can view details, including cuisine type, location, and reviews. The app integrates with Google Maps, allowing users to get directions easily. Feastr simplifies decision-making by making restaurant discovery fun and engaging
 
 ### Problem Space
 
-Why is your app needed? Give any background information around any pain points or other reasons.
+Finding a place to eat can be overwhelming with so many choices available. Traditional restaurant discovery apps provide extensive lists but lack an engaging and quick way to browse options. Feastr solves this by offering a swipe-based interface, allowing users to quickly explore and choose restaurants without information overload.
 
 ### User Profile
 
-Who will use your app? How will they use it? Add any special considerations that your app must take into account.
+Primary Users:
+
+1/ Food lovers in Calgary looking for new dining experiences
+People who struggle with decision fatigue when choosing a place to eat
+Groups or couples looking for an easy way to agree on a restaurant
+
+2/ Use Cases:
+A user swipes through restaurant options and saves favorites for later.
+A couple swipes together to find a place they both like.
+A traveler in Calgary uses the app to discover new dining spots quickly.
+
+3/ Special Considerations:
+The app should be mobile-friendly for easy swiping.
+It should offer cuisine filters to personalize restaurant options.
+It must integrate with Google Maps for navigation.
 
 ### Features
 
-List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe _how_ these features are implemented, only _what_ needs to be implemented.
+1/ Swipe to Match – Users can swipe left (pass) or right (like) on restaurants.
+2/ Restaurant Profile – Clicking on a matched restaurant shows details such as cuisine type, reviews, and images.
+3/ Google Maps Integration – Clicking "Get Directions" opens Google Maps with navigation to the restaurant.
+4/ Restaurant Data from API – The app fetches restaurant information from an external API.
 
 ## Implementation
 
 ### Tech Stack
 
-List technologies that will be used in your app, including any libraries to save time or provide more functionality. Be sure to research any potential limitations.
+1/ Frontend: React.js (for an interactive and mobile-friendly UI)
+2/ Backend: Node.js + Express.js (to handle API calls and server-side logic)
+3/ API for Restaurants: Yelp Fusion API or OpenTable API
+4/ Maps Integration: Google Maps API
+5/ Hosting: Vercel or Netlify (for deployment)
 
 ### APIs
 
-List any external sources of data that will be used in your app.
+Yelp Fusion API – Provides restaurant listings, ratings, images, and reviews.
+Google Maps API – Enables location services and directions.
 
 ### Sitemap
 
-List the pages of your app with brief descriptions. You can show this visually, or write it out.
+Home Swipe interface for browsing restaurants
+Restaurant Profile Detailed view of restaurant information
+Settings User preferences, such as cuisine filters
 
 ### Mockups
 
-Provide visuals of your app's screens. You can use pictures of hand-drawn sketches, or wireframing tools like Figma.
+Wireframes will be created in Figma to visualize:
+Swipe interface
+Restaurant profile details
+Favorites list
+Google Maps integration
 
 ### Data
 
-Describe your data and the relationships between the data points. You can show this visually using diagrams, or write it out. 
+Restaurant Data (from API)
+{
+"id": "12345",
+"name": "Best Burger Calgary",
+"cuisine": "American",
+"location": "123 4th Ave, Calgary",
+"image_url": "https://restaurant-image.jpg",
+"rating": 4.5,
+"reviews": 150
+}
 
 ### Endpoints
 
-List endpoints that your server will implement, including HTTP methods, parameters, and example responses.
+/restaurants GET Fetch restaurant list from API
+/swiped-right POST Log a restaurant that the user swiped right on
+/swiped-right GET Retrieve the list of restaurants swiped right
 
 ## Roadmap
 
-Scope your project as a sprint. Break down the tasks that will need to be completed and map out timeframes for implementation working back from the capstone due date. 
+1 Set up project structure, choose APIs, and create wireframes
+2 Build frontend UI (swiping mechanism)
+3 Integrate restaurant API & Google Maps
+4 Implement filters and user favorites
+5 Testing, deployment, and final improvements
 
 ---
 
 ## Future Implementations
-Your project will be marked based on what you committed to in the above document. Here, you can list any additional features you may complete after the MVP of your application is built, or if you have extra time before the Capstone due date.
 
+1/ User authentication for personalized recommendations
+2/ AI-powered suggestions based on past likes
+3/ Social sharing features to help groups decide together
