@@ -1,0 +1,27 @@
+@import "./variables";
+@import "./mixins";
+
+.swipe-container {
+  @include flex-center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: $bg-color;
+  font-family: $primary-font;
+}
+
+.restaurant-card {
+  width: 80%;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.like-btn {
+  @include button-style($primary-color);
+}
+
+.dislike-btn {
+  @include button-style(gray);
+}
